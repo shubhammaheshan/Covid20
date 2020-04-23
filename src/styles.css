@@ -1,0 +1,27 @@
+*{
+   
+    margin: 0; padding: 0;box-sizing: border-box;font-family: 'Muli', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+html, body { height: 100%;
+ }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    width: 100%;
+  }
+
+  #sticky-footer {
+    bottom: 0;
+    color: #707070;
+    height: 40px;
+    left: 0;
+    position: relative; 
+    font-size: small;
+    width:100%;
+}
+
+
+
+ 

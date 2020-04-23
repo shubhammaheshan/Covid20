@@ -1,0 +1,35 @@
+<div class="container-fluid sub_section pt-2 pb-2" id="aboutid">
+    <div class="section_header text-center mb-2">
+        <h1 class="text-uppercase text-info">COVID-19 Live Updates of world</h1>
+    </div>
+</div>
+
+<img src="assets/corona/loading-bar.gif" id="loading_bar" *ngIf="loadingbar">
+<input type="text" class="form-control mb-3" placeholder="Search Data CountryWise" aria-label="Recipient's username"
+aria-describedby="button-addon2" [(ngModel)]="searchItem">
+
+<div class="table-responsive">
+    <table class="table">
+        <thead class="text-capitalize alert-secondary">
+            <tr>
+                <th>Country</th>
+                <th>TotalConfirmed</th>
+                <th>TotalDeaths</th>
+                <th>TotalRecovered</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="filterCondn">
+            <tr *ngFor="let world of worldArrayData | filterSearch:searchItem" class="mb-1">
+                <td>{{world.Country | substring}}</td>
+                <td>{{world.TotalConfirmed}}</td>
+                <td>{{world.TotalDeaths}}</td>
+                <td>{{world.TotalRecovered}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- ****top button***** -->
+
+<button id="myBtn" title="Go to top" (click)="topFunction()">Top</button>
+</div>
+
+

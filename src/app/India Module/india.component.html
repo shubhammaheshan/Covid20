@@ -1,0 +1,93 @@
+<div class="container-fluid sub_section pt-2 pb-2 text-center" id="aboutid">
+    <div class="section_header mb-2">
+        <h1 class="text-uppercase">COVID-19 Live Updates of INDIA</h1>
+    </div>
+</div>
+<div class="container-fluid">
+<!-- <div class="d-flex justify-content-around align-items-center text-capitalize banner">
+    <div>
+        <h2>Confirmed</h2>
+        <h1 class="count" *ngIf="checkcon">{{StateTotalData.confirmed}}</h1>
+    </div>
+    <div>
+        <h2>Active</h2>
+        <h1 class="count" *ngIf="checkcon">{{StateTotalData.active}}</h1>
+    </div>
+    <div>
+        <h2>Recovered</h2>
+        <h1 class="count" *ngIf="checkcon">{{StateTotalData.recovered}}</h1>
+
+    </div>
+    <div>
+        <h2>Deaths</h2>
+        <h1 class="count" *ngIf="checkcon">{{StateTotalData.deaths}}</h1>
+    </div>
+</div> -->
+    <div class="row banner">
+      <div class="col-sm text-center">
+        <h2>Confirmed</h2>
+        <h1 class="count" *ngIf="checkcon">{{StateTotalData.confirmed}}</h1>
+      </div>
+      <div class="col-sm text-center">
+        <h2>Active</h2>
+        <h1 class="count" *ngIf="checkcon">{{StateTotalData.active}}</h1>
+      </div>
+      <div class="col-sm text-center">
+        <h2>Recovered</h2>
+        <h1 class="count" *ngIf="checkcon">{{StateTotalData.recovered}}</h1>
+      </div>
+      <div class="col-sm text-center">
+        <h2>Deaths</h2>
+        <h1 class="count" *ngIf="checkcon">{{StateTotalData.deaths}}</h1>
+      </div>
+    </div>
+</div>
+    <form class="example-form parent">
+        <mat-form-field class="example-full-width">
+            <mat-label>Search State</mat-label>
+            <input matInput placeholder="Ex. Maharashtra" (keyup)="filterData($event.target.value)">
+        </mat-form-field>
+    </form>
+
+
+
+
+<table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8 tdd tab" matSort>
+    <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumns">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{column}} </th>
+        <td mat-cell *matCellDef="let element" (click)="clickEvent($event)">
+            <span class="arrow1"><i class="right arrow"></i></span> {{element[column]}}</td>
+    </ng-container>
+
+    <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+    <ng-container matColumnDef="expandedDetail">
+        <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
+            <div class="example-element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+                <table class="table table-bordered mytable table-responsive">
+                    <thead>
+                        <tr>
+                            <th>City</th>
+                            <th>Confirmed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of ArrayStateData">
+                            <td>{{data.city}}</td>
+                            <td>{{data.data.confirmed}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let element; columns: displayedColumns;" class="example-element-row"
+        [class.example-expanded-row]="expandedElement === element"
+        (click)="expandedElement = expandedElement === element ? null : element" (click)="displayData(element)">
+    </tr>
+    <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row">
+    </tr>
+</table>
+<mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]" [length]="1000">
+</mat-paginator>

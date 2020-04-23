@@ -1,0 +1,117 @@
+.main_header{
+    margin-top: 50px;
+}
+
+.right h1{
+    font-size: 3rem;
+    margin-bottom: .5rem;
+    line-height: 1.2;
+    font-weight: 20;
+}
+#corona_rot img{
+    animation: gocorona 3s linear infinite;
+    
+ }
+ @keyframes gocorona{
+     0% { transform: rotate(0);}
+     100% { transform: rotate(360deg);}
+ }
+ .leftsaid img{ animation: heartback 5s linear infinite;
+ 
+ }
+ .banner div p{
+     font-size: 18px;
+ }
+
+ @keyframes  heartback{
+     0%{
+         transform: scale(.75);
+     }
+     20%{
+         transform: scale(1);
+     }
+     40%{
+         transform: scale(.75);
+     }
+     60%{
+         transform: scale(1);
+     }
+ } 
+
+/* *******corona update**** */
+.corona_update{
+    margin: 0 0 30px 0;
+}
+.corona_update h2{
+    color:chocolate;
+}
+.corona_update h1{
+    text-align: center ;
+    font-size: 2rem;
+}
+.section_header{
+    font-weight: bold;
+}
+
+
+
+@media(max-width:768px){
+    .main_header{height: 700px; text-align: center;}
+      .count_style{
+      display: inline!important;
+    }
+   
+   
+  }
+  .row{
+    margin-left: 0!important;
+    margin-right: 0!important;
+
+  }
+
+  .count_style p{
+   text-align: center;
+  }
+  
+
+  .symtos:hover{ animation: heeart 5s linear infinite;
+    }
+  @keyframes  heeart{
+    0%{
+        transform: scale(.75);
+    }
+    20%{
+        transform: scale(1);
+    }
+    40%{
+        transform: scale(.75);
+    }
+    60%{
+        transform: scale(1);
+    }
+}
+
+
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 22px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+
+

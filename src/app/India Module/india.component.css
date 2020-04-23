@@ -1,0 +1,174 @@
+.navbar {
+    height: 50px;
+    padding: 0 15px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .navbar a {
+    color: white;
+    line-height: 3em;
+  }
+  
+  .table-area {
+    position: relative;
+    z-index: 0;
+    margin-top: 50px;
+  }
+
+  
+  
+  #loading_bar{
+    width: 150px;
+    height: 150px;
+  position: absolute;
+  left: 45%;
+  top: 55%;
+  }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red;
+  opacity: 1; /* Firefox */
+  }
+  
+  .section_header{
+    margin-top: 60px;
+  }
+  
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+  /* tr:nth-child(odd) { 
+    background-color: Lightgreen; 
+                    }  */
+
+
+
+
+.thead{
+  position: sticky;
+  top: 52px;
+}
+th:hover{
+    color: purple;
+    
+}
+th{
+  font-size: 16px;
+} 
+
+
+table {
+  width: 100%;
+}
+
+tr.example-detail-row {
+  height: 0;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #efefef;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.example-element-diagram {
+  min-width: 80px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 120px;
+}
+
+.example-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.example-element-description {
+  padding: 16px;
+}
+
+.example-element-description-attribution {
+  opacity: 0.5;
+}
+.mytable{
+  width: 250px;
+}
+.banner div h1{
+  font-weight: bold;
+}
+.banner div:nth-child(1){
+    color: red;
+}
+.banner div:nth-child(2){
+  color:dodgerblue;
+}
+.banner div:nth-child(3){
+  color: green;
+}
+.banner div:nth-child(4){
+  color: darkgrey;
+} 
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.arrow1{
+  display: none;
+}
+td:nth-child(1) .arrow1{
+   /* background: red; */
+  display: inline-block;
+}
+
+i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right{
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+ 
+}

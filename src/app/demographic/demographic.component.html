@@ -1,0 +1,47 @@
+<div class="jumbotron bg-white text-center">
+    <h1>Corono COVID-19 Tracker</h1>
+    <div class="row">
+        <div class="card col p-3 m-3">
+            <div class="ui statistic">
+                <div class="label">
+                    World COVID-19 Patients
+                </div>
+                <div class="value">
+                    {{worldArrayData.TotalConfirmed}}
+                </div>
+            </div>
+        </div>
+        <div class="card col p-3 m-3">
+            <div class="ui statistic">
+                <div class="label">
+                    Total Recovered Patients
+                </div>
+                <div class="value">
+                    {{worldArrayData.TotalRecovered}}
+
+                </div>
+            </div>
+        </div>
+        <div class="card col p-3 m-3">
+            <div class="ui statistic">
+                <div class="label">
+                    Total Death Patients
+                </div>
+                <div class="value">
+                    {{worldArrayData.TotalDeaths}}
+
+                </div>
+            </div>
+        </div>
+        <div class="card col p-3 m-3">
+            <div class="ui statistic">
+                <div class="label">
+                    Today Confirmed Cases
+                </div>
+                <div class="value">
+                    {{worldArrayData.NewConfirmed}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
