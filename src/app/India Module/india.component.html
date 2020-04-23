@@ -4,54 +4,36 @@
     </div>
 </div>
 <div class="container-fluid">
-<!-- <div class="d-flex justify-content-around align-items-center text-capitalize banner">
-    <div>
-        <h2>Confirmed</h2>
-        <h1 class="count" *ngIf="checkcon">{{StateTotalData.confirmed}}</h1>
-    </div>
-    <div>
-        <h2>Active</h2>
-        <h1 class="count" *ngIf="checkcon">{{StateTotalData.active}}</h1>
-    </div>
-    <div>
-        <h2>Recovered</h2>
-        <h1 class="count" *ngIf="checkcon">{{StateTotalData.recovered}}</h1>
-
-    </div>
-    <div>
-        <h2>Deaths</h2>
-        <h1 class="count" *ngIf="checkcon">{{StateTotalData.deaths}}</h1>
-    </div>
-</div> -->
     <div class="row banner">
-      <div class="col-sm text-center">
-        <h2>Confirmed</h2>
-        <h1 class="count" *ngIf="checkcon">{{StateTotalData.confirmed}}</h1>
-      </div>
-      <div class="col-sm text-center">
-        <h2>Active</h2>
-        <h1 class="count" *ngIf="checkcon">{{StateTotalData.active}}</h1>
-      </div>
-      <div class="col-sm text-center">
-        <h2>Recovered</h2>
-        <h1 class="count" *ngIf="checkcon">{{StateTotalData.recovered}}</h1>
-      </div>
-      <div class="col-sm text-center">
-        <h2>Deaths</h2>
-        <h1 class="count" *ngIf="checkcon">{{StateTotalData.deaths}}</h1>
-      </div>
+        <div class="col-sm text-center">
+            <h2>Confirmed</h2>
+            <h1 class="count" *ngIf="checkcon">{{StateTotalData.confirmed}}</h1>
+        </div>
+        <div class="col-sm text-center">
+            <h2>Active</h2>
+            <h1 class="count" *ngIf="checkcon">{{StateTotalData.active}}</h1>
+        </div>
+        <div class="col-sm text-center">
+            <h2>Recovered</h2>
+            <h1 class="count" *ngIf="checkcon">{{StateTotalData.recovered}}</h1>
+        </div>
+        <div class="col-sm text-center">
+            <h2>Deaths</h2>
+            <h1 class="count" *ngIf="checkcon">{{StateTotalData.deaths}}</h1>
+        </div>
     </div>
 </div>
-    <form class="example-form parent">
-        <mat-form-field class="example-full-width">
-            <mat-label>Search State</mat-label>
-            <input matInput placeholder="Ex. Maharashtra" (keyup)="filterData($event.target.value)">
-        </mat-form-field>
-    </form>
+<form class="example-form parent">
+    <mat-form-field class="example-full-width">
+        <mat-label>Search State</mat-label>
+        <input matInput placeholder="Ex. Maharashtra" (keyup)="filterData($event.target.value)">
+    </mat-form-field>
+</form>
 
 
 
 
+<!-- <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8 tdd tab" matSort> -->
 <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8 tdd tab" matSort>
     <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumns">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> {{column}} </th>

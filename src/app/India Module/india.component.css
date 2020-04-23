@@ -1,72 +1,14 @@
-.navbar {
-    height: 50px;
-    padding: 0 15px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-  }
-  
-  .navbar a {
-    color: white;
-    line-height: 3em;
-  }
-  
-  .table-area {
-    position: relative;
-    z-index: 0;
-    margin-top: 50px;
-  }
-
-  
-  
-  #loading_bar{
-    width: 150px;
-    height: 150px;
-  position: absolute;
-  left: 45%;
-  top: 55%;
-  }
-
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+ ::placeholder {
   color: red;
-  opacity: 1; /* Firefox */
+  opacity: 1; 
   }
   
   .section_header{
     margin-top: 60px;
   }
   
-  #myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: purple;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 4px;
-  }
   
-  #myBtn:hover {
-    background-color: #555;
-  }
-  /* tr:nth-child(odd) { 
-    background-color: Lightgreen; 
-                    }  */
 
-
-
-
-.thead{
-  position: sticky;
-  top: 52px;
-}
 th:hover{
     color: purple;
     
@@ -152,7 +94,6 @@ tr.example-element-row:not(.example-expanded-row):active {
   display: none;
 }
 td:nth-child(1) .arrow1{
-   /* background: red; */
   display: inline-block;
 }
 
@@ -170,5 +111,11 @@ i {
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+}
+
  
+@media screen and (max-width: 500px) {
+    table{
+      width: 500px;
+    }
 }
