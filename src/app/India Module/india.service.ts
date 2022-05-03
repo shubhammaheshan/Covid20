@@ -10,11 +10,11 @@ export class IndiaService {
   constructor(public http:HttpClient) { }
 
   public IndiaData():Observable<any>{
-    return this.http.get("https://api.covid19india.org/data.json")
+    return this.http.get("https://data.covid19india.org/data.json")
   }
 
   public stateData():Observable<any>{
-    return this.http.get("https://api.covid19india.org/state_district_wise.json")
+    return this.http.get("https://data.covid19india.org/state_district_wise.json")
 
 }
 }
